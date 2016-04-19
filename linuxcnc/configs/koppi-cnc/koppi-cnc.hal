@@ -34,7 +34,7 @@ loadrt pid names=x-pid,y-pid,z-pid
 #newinst pid y-pid
 #newinst pid z-pid
 
-loadusr -W hal_input -KRAL Logitech
+#loadusr -W hal_input -KRAL Logitech
 
 ###########################################################
 # Functions
@@ -84,14 +84,14 @@ loadusr classicladder --nogui koppi-cnc-estop.clp
 #
 ###########################################################
 
-loadusr -W hal_manualtoolchange
-net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
-net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
-net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
-net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
+#loadusr -W hal_manualtoolchange
+#net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
+#net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
+#net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
+#net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 
 ###########################################################
 # ES8266 esp-01 test
 ###########################################################
 
-loadusr ./esp-01-mqtt.py
+#loadusr ./esp-01-mqtt.py
